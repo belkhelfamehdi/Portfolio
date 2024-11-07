@@ -15,7 +15,7 @@ const LandingPage = () => {
                         <Typewriter
                             words={["React.js Developer", "Java Developer", "Anime Fan"]}
                             loop={true}
-                            typeSpeed={200}
+                            typeSpeed={150}
                             deleteSpeed={50}
                             delaySpeed={2000}
                         />
@@ -36,7 +36,7 @@ const LandingPage = () => {
                 </div>
                 <div>
                     <div className="relative w-[500px] h-[500px] rounded-full overflow-hidden shadow-xl border-4 border-[#cf1b1b]">
-                        <img src="/images/mehdi.jpg" className="object-cover w-full h-full" alt="Mehdi" />
+                        <img src="/images/me/mehdi.jpg" className="object-cover w-full h-full" alt="Mehdi" />
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-30"></div>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ import { SiTailwindcss, SiJavascript, SiPostgresql } from "react-icons/si";
 
 const Skills = () => {
 
-    const card = "flex justify-center items-center border-b-[6px] border-red-600 pb-1 transition-all duration-500"
+    const card = "flex justify-center items-center border-b-[6px] border-red-600 pb-1 transition-all duration-500 hover:scale-110"
     const icon = "text-5xl mb-1 p-2 dark:text-white text-black transition-all duration-500"
     const text = "text-2xl font-semibold dark:text-white text-black transition-all duration-500"
 
@@ -13,7 +13,7 @@ const Skills = () => {
                 <div>
                     <h1 className="text-4xl text-[#cf1b1b] font-extrabold text-center relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:h-[4px] after:-my-3 after:bg-[#cf1b1b] after:bottom-0 after:w-3/4">Skills</h1>
                 </div>
-                <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 text-center px-4 ">
+                <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 gap-x-10 text-center px-16 pb-10 ">
                     <div className={card}>
                     <SiTailwindcss className={icon} />
                     <p className={text} >Tailwind</p>

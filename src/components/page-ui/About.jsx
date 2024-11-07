@@ -9,7 +9,7 @@ const About = () => {
             <div className="container my-20 px-40 flex flex-col justify-between md:flex-row items-center gap-20">
                 <div className="w-5/12 flex justify-center">
                 <img
-                    src="/images/mehdiP.jpg"
+                    src="/images/me/mehdiP.jpg"
                     alt="Mehdi"
                     className="rounded-lg shadow-lg w-3/4 h-3/4 object-cover"
                 />
