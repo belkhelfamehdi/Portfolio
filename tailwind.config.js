@@ -7,6 +7,10 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      transitionProperty: {
+        'transform': 'transform',
+        'opacity': 'opacity',
+      },
       keyframes: {
         blink: {
           '0%, 100%': { opacity: 1 },

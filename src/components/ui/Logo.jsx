@@ -1,7 +1,12 @@
+import {Link} from 'react-router-dom'
+import { FaCode } from "react-icons/fa6";
+
 const Logo = () => {
     return (
-        <div className="flex items-center">
-            <img src="/path-to-logo.png" alt="Logo" className="w-10 h-10" />
+        <div className="flex items-center justify-center">
+            <Link to="/">
+                <FaCode className="text-5xl text-[#cf1b1b]" />
+            </Link>
         </div>
     );
 };
