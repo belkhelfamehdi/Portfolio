@@ -1,4 +1,3 @@
-// TextareaField.js
 import PropTypes from 'prop-types';
 
 const TextArea = ({ id, rows = 4, placeholder, required = false }) => {

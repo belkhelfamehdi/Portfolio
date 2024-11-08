@@ -5,12 +5,10 @@ import Skills from "./components/page-ui/Skills"
 import Projects from "./components/page-ui/Projects"
 import Contact from "./components/page-ui/Contact"
 import Footer from "./components/page-ui/Footer"
-import { BrowserRouter as Router } from "react-router-dom"
-
 function App() {
 
   return (
-    <Router>
+    <div>
       <Navbar />
       <LandingPage />
       <About />
@@ -18,7 +16,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
-    </Router>
+    </div>
   )
 }
 
