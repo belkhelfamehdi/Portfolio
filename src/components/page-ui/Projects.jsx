@@ -28,10 +28,10 @@ const Projects = () => {
     return (
         <section id="projects" className="min-h-screen flex justify-center dark:bg-black bg-white dark:text-white font-poppins transition-all duration-500">
             <div className="md:container flex flex-col items-center justify-between">
-                <h2 className="text-4xl text-[#cf1b1b] font-extrabold mb-10 text-center relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:h-[4px] after:-my-3 after:bg-[#cf1b1b] after:bottom-0 after:w-3/4">
+                <h2 className="text-3xl text-[#cf1b1b] font-extrabold mb-10 text-center relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:-my-3 after:bg-[#cf1b1b] after:bottom-0 after:w-3/4">
                     Projects
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6 md:gap-12 w-full md:px-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6 md:gap-14 w-full lg:pt-10 md:px-10">
                     {[...Array(6)].map((_, index) => (
                         <div
                             key={index}
@@ -40,13 +40,13 @@ const Projects = () => {
                             style={{ transitionDelay: `${index * 150}ms` }}
                         >
                             <a href="https://github.com/belkhelfamehdi/Library-Management-WebApp" target="_blank" rel="noreferrer">
-                                <img src="/images/projects/clinical.png" alt={`Project ${index + 1}`} className={image} />
+                                <img src="./images/projects/clinical.png" alt={`Project ${index + 1}`} className={image} />
                             </a>
                         </div>
                     ))}
                 </div>
-                <button className="my-20 px-14 py-4 bg-[#cf1b1b] text-white text-xl font-bold rounded-xl">
-                    <a href="https://drive.google.com/file/d/1JA_tVcGv0x6NxdahaItfm1WDMzqktliH/view?usp=sharing" target="_blank" rel="noreferrer">
+                <button className="my-20 px-8 py-3 bg-[#cf1b1b] text-white text-sm font-bold rounded-xl">
+                    <a href="https://drive.google.com/file/d/1o76Kd4YwOIrmPd3AGvLtEmhnMKRKT45G/view?usp=sharing" target="_blank" rel="noreferrer">
                         Download CV
                     </a>
                 </button>

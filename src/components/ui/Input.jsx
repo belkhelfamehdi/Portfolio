@@ -8,7 +8,7 @@ const Input = ({ id, type = "text", placeholder, required = false }) => {
         id={id}
         placeholder={placeholder}
         required={required}
-        className="mt-1 block w-full px-3 py-4 border-2 border-black rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-600 text-black"
+        className="mt-1 block w-full px-2 py-3 border-2 border-black rounded-md shadow-sm font-bold focus:outline-none focus:ring-2 focus:ring-red-600 text-black placeholder-gray-500"
         autoComplete='on'
       />
     </div>

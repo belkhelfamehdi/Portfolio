@@ -15,7 +15,7 @@ const DarkModeToggle = () => {
 
     return (
         <button onClick={toggleDarkMode} className="focus:outline-none">
-            {darkMode ? <MoonIcon className='h-10 w-10 text-black'/> : <MoonIcon className='h-10 w-10'/>}
+            {darkMode ? <MoonIcon className='h-8 w-8 text-black'/> : <MoonIcon className='h-8 w-8'/>}
         </button>
     );
 };
