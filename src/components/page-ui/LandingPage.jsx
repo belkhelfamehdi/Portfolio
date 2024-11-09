@@ -1,6 +1,7 @@
 import { Typewriter } from 'react-simple-typewriter';
 import Background from "../ui/Background";
 import { LinkedInLogoIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
+import '../../index.css';
 
 const LandingPage = () => {
     return (

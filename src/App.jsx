@@ -5,6 +5,7 @@ import Skills from "./components/page-ui/Skills"
 import Projects from "./components/page-ui/Projects"
 import Contact from "./components/page-ui/Contact"
 import Footer from "./components/page-ui/Footer"
+import './index.css';
 function App() {
 
   return (
