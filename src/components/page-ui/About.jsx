@@ -24,7 +24,7 @@ const About = () => {
     >
       <div
         className={`container flex flex-col justify-between items-center dark:text-white text-black h-full transition-all duration-500 transform ${
-          inView ? "opacity-100 -translate-y-0 duration-700" : "opacity-0 -translate-y-20 duration-5000"
+          inView ? "opacity-100 -translate-y-0 duration-1000" : "opacity-0 -translate-y-20 duration-5000"
         }`}
       >
         <div>
