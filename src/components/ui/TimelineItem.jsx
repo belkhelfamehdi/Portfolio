@@ -8,7 +8,7 @@ const TimelineItem = ({ label, date, title, content }) => (
                 <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-red-500 bg-black rounded-full">
                     {date}
                 </time>
-                <div className="text-xl font-bold dark:text-white text-black transition-all duration-500In">{title}</div>
+                <div className="text-xl font-bold dark:text-white text-black transition-all duration-500">{title}</div>
             </div>
         <div className="dark:text-gray-400 text-gray-600 transition-all duration-500">
             {content}
