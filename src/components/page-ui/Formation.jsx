@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import TimelineItem from '../ui/TimelineItem';
 
 const Formation = () => {
@@ -34,6 +35,7 @@ const Formation = () => {
                 {timelineData.map((item, index) => (
                     <TimelineItem 
                         key={index}
+                        id={`formation-${index}`}
                         label={item.label}
                         date={item.date}
                         title={item.title}
