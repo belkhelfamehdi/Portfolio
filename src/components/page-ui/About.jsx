@@ -20,10 +20,10 @@ const About = () => {
   return (
     <section
       id="about"
-      className="lg:h-screen flex justify-center dark:bg-black bg-white dark:text-white font-poppins py-10 lg:py-10 transition-all duration-500"
+      className=" flex justify-center dark:bg-black bg-white dark:text-white font-poppins py-10 lg:py-10 transition-all duration-500"
     >
       <div
-        className={`container flex flex-col lg:justify-between items-center dark:text-white text-black h-full transition-all duration-500 transform ${
+        className={`container flex flex-col  items-center dark:text-white text-black h-full transition-all duration-500 transform ${
           inView ? "opacity-100 -translate-y-0 duration-1000" : "opacity-0 -translate-y-20 duration-5000"
         }`}
       >

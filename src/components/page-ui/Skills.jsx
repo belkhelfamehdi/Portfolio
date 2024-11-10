@@ -37,7 +37,7 @@ const Skills = () => {
     const textBase = "text-xl font-semibold dark:text-white text-black transition-all duration-700";
 
     return (
-        <section id="about" className="flex justify-center dark:bg-black bg-white font-poppins transition-all duration-500">
+        <section id="skills" className="flex justify-center dark:bg-black bg-white font-poppins transition-all duration-500">
             <div className="container flex flex-col space-y-10 items-center text-white md:px-28">
                 <div>
                     <h1 className="text-3xl text-[#cf1b1b] font-extrabold text-center relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:-my-3 after:bg-[#cf1b1b] after:bottom-0 after:w-3/4">Skills</h1>

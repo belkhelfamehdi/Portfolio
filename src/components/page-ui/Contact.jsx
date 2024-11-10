@@ -22,10 +22,11 @@ const Contact = () => {
         handleScroll();
 
         return () => window.removeEventListener('scroll', handleScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
-        <section id="contact" className="min-h-screen flex justify-center items-center dark:bg-black bg-white dark:text-white font-poppins pb-20 transition-all duration-500">
+        <section id="contact" className="flex justify-center items-center dark:bg-black bg-white dark:text-white font-poppins pb-20 transition-all duration-500">
             <div className="container max-w-md mx-auto p-8 rounded-lg">
                 <h2 className="text-3xl text-[#cf1b1b] font-extrabold mb-10 text-center relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:-my-3 after:bg-[#cf1b1b] after:bottom-0 after:w-1/4">
                     Contact

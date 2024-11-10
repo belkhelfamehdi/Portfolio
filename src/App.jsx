@@ -5,6 +5,7 @@ import Skills from "./components/page-ui/Skills"
 import Projects from "./components/page-ui/Projects"
 import Contact from "./components/page-ui/Contact"
 import Footer from "./components/page-ui/Footer"
+import Formation from "./components/page-ui/Formation"
 import './index.css';
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <LandingPage />
       <About />
+      <Formation />
       <Skills />
       <Projects />
       <Contact />

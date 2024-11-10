@@ -23,9 +23,11 @@ const LandingPage = () => {
                         />
                         <span className='bg-current animate-blink w-3 md:w-4 text-3xl md:text-4xl lg:text-5xl mt-1 lg:mt-3'>&nbsp;</span>
                     </h1>
-                    <button className="mt-4 px-8 md:px-8 lg:px-11 py-3 md:py-3 bg-[#cf1b1b] text-white text-md md:text-md font-bold rounded-xl">
-                        Contact
-                    </button>
+                        <a href='#contact'>
+                            <button className="mt-4 px-8 md:px-8 lg:px-11 py-3 md:py-3 bg-[#cf1b1b] text-white text-md md:text-md font-bold rounded-xl">
+                                Contact
+                            </button>
+                        </a>
 
                     {/* Social Links */}
                     <div className="flex justify-center lg:justify-start space-x-4 lg:mt-20 mt-7">

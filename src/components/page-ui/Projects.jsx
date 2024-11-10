@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const Projects = () => {
     const projectCard = "flex justify-center items-center rounded-lg shadow-lg transition-all duration-500 overflow-hidden";
-    const image = "rounded-md w-full h-full max-md:p-4 hover:scale-110 transition-all duration-500";
+    const image = "rounded-md max-sm:rounded-lg w-full h-full max-md:p-4 hover:scale-110 transition-all duration-500";
 
     const [inView, setInView] = useState(Array(6).fill(false)); // Initialize inView state for each project
 
@@ -26,8 +26,8 @@ const Projects = () => {
     }, []);
 
     return (
-        <section id="projects" className="min-h-screen flex justify-center dark:bg-black bg-white dark:text-white font-poppins transition-all duration-500">
-            <div className="md:container flex flex-col items-center justify-between">
+        <section id="projects" className="flex justify-center dark:bg-black bg-white dark:text-white font-poppins transition-all duration-500">
+            <div className="md:container flex flex-col items-center">
                 <h2 className="text-3xl text-[#cf1b1b] font-extrabold mb-10 text-center relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:-my-3 after:bg-[#cf1b1b] after:bottom-0 after:w-3/4">
                     Projects
                 </h2>
@@ -45,11 +45,12 @@ const Projects = () => {
                         </div>
                     ))}
                 </div>
-                <button className="my-20 px-8 py-3 bg-[#cf1b1b] text-white text-sm font-bold rounded-xl">
+
                     <a href="https://drive.google.com/file/d/1o76Kd4YwOIrmPd3AGvLtEmhnMKRKT45G/view?usp=sharing" target="_blank" rel="noreferrer">
-                        Download CV
+                        <button className="my-20 px-8 py-3 bg-[#cf1b1b] text-white text-sm font-bold rounded-xl">
+                            Download CV
+                        </button>
                     </a>
-                </button>
             </div>
         </section>
     );
