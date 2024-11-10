@@ -6,11 +6,13 @@ import Projects from "./components/page-ui/Projects"
 import Contact from "./components/page-ui/Contact"
 import Footer from "./components/page-ui/Footer"
 import Formation from "./components/page-ui/Formation"
+import Welcome from "./components/page-ui/Welcome"
 import './index.css';
 function App() {
 
   return (
     <div>
+      <Welcome />
       <Navbar />
       <LandingPage />
       <About />
