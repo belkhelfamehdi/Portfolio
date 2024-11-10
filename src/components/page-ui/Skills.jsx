@@ -30,6 +30,7 @@ const Skills = () => {
         window.addEventListener('scroll', handleScroll);
         handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const cardBase = "flex justify-center items-center border-b-[3px] border-red-600 pb-1 transition-all duration-700";

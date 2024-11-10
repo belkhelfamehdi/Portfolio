@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import TimelineItem from '../ui/TimelineItem';
 
 const Formation = () => {
