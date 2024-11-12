@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 
-const TextArea = ({ id, rows = 4, placeholder, required = false }) => {
+const TextArea = ({ id, name, rows = 4, placeholder, required = false }) => {
   return (
     <div>
       <textarea
         id={id}
+        name={name}
         rows={rows}
         placeholder={placeholder}
         required={required}
@@ -16,6 +17,7 @@ const TextArea = ({ id, rows = 4, placeholder, required = false }) => {
 
 TextArea.propTypes = {
   id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   rows: PropTypes.number,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
