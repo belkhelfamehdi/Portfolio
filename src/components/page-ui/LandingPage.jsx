@@ -8,7 +8,6 @@ const LandingPage = () => {
         <section id='home' className="h-screen flex justify-center font-poppins dark:bg-transparent max-lg:pt-20 max-md:pt-20 max-md:dark:bg-black bg-white transition-colors duration-500">
             <div className="container relative flex flex-col lg:flex-row items-center justify-center lg:justify-between dark:text-white text-black px-6 md:px-12 lg:px-24 transition-colors duration-500">
                 
-                {/* Text Content */}
                 <div className="relative z-10 text-center lg:text-left lg:py-8 mb-8 lg:mb-0">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold">
                         Hi, <br />I&apos;m <span className="text-[#cf1b1b]">Mehdi</span>
@@ -29,7 +28,6 @@ const LandingPage = () => {
                             </button>
                         </a>
 
-                    {/* Social Links */}
                     <div className="flex justify-center lg:justify-start space-x-4 lg:mt-20 mt-7">
                         <a href="https://www.linkedin.com/in/mehdi-belkhelfa-02b7a82b0/" target="_blank" rel="noreferrer">
                             <LinkedInLogoIcon className="w-5 h-5 md:w-7 md:h-7 dark:text-white text-black dark:hover:text-[#cf1b1b] hover:text-[#cf1b1b] transition-all duration-200" />
@@ -40,7 +38,6 @@ const LandingPage = () => {
                     </div>
                 </div>
 
-                {/* Image Content */}
                 <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[320px] lg:h-[320px] rounded-full overflow-hidden shadow-xl border-4 border-[#cf1b1b]">
                     <img src="./images/me/mehdi.jpg" className="object-cover w-full h-full" alt="Mehdi" />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-30"></div>

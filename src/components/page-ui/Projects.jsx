@@ -4,7 +4,7 @@ const Projects = () => {
     const projectCard = "flex justify-center items-center rounded-lg shadow-lg transition-all duration-500 overflow-hidden";
     const image = "rounded-md max-sm:rounded-lg w-full h-full max-md:p-4 hover:scale-110 transition-all duration-500";
 
-    const [inView, setInView] = useState(Array(6).fill(false)); // Initialize inView state for each project
+    const [inView, setInView] = useState(Array(6).fill(false));
 
     useEffect(() => {
         const handleScroll = () => {
