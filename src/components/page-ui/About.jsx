@@ -1,29 +1,37 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const About = () => {
+  const aboutRef = useRef(null);
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const element = document.getElementById("about");
-      const rect = element.getBoundingClientRect();
-      const isInView = rect.top <= window.innerHeight && rect.bottom >= 0;
-      setInView(isInView);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    const element = aboutRef.current;
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
     };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <section
       id="about"
-      className=" flex justify-center dark:bg-black bg-white dark:text-white font-poppins py-10 lg:py-10 transition-all duration-500"
+      ref={aboutRef}
+      className="flex justify-center dark:bg-black bg-white dark:text-white font-poppins py-10 lg:py-10 transition-all duration-500"
     >
       <div
-        className={`container flex flex-col  items-center dark:text-white text-black h-full transition-all duration-500 transform ${
+        className={`container flex flex-col items-center dark:text-white text-black h-full transition-all duration-500 transform ${
           inView ? "opacity-100 -translate-y-0 duration-1000" : "opacity-0 -translate-y-20 duration-5000"
         }`}
       >

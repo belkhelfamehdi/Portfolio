@@ -1,29 +1,34 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const Projects = () => {
     const projectCard = "flex justify-center items-center rounded-lg shadow-lg transition-all duration-500 overflow-hidden";
     const image = "rounded-md max-sm:rounded-lg w-full h-full max-md:p-4 hover:scale-110 transition-all duration-500";
 
+    const projectRefs = useRef([]);
     const [inView, setInView] = useState(Array(6).fill(false));
 
     useEffect(() => {
-        const handleScroll = () => {
-            const newInView = inView.map((item, index) => {
-                const element = document.getElementById(`project-${index}`);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    return rect.top <= window.innerHeight && rect.bottom >= 0;
-                }
-                return item;
-            });
-            setInView(newInView);
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    const index = projectRefs.current.indexOf(entry.target);
+                    if (entry.isIntersecting && index !== -1) {
+                        setInView((prev) => {
+                            const updated = [...prev];
+                            updated[index] = true;
+                            return updated;
+                        });
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        projectRefs.current.forEach((ref) => ref && observer.observe(ref));
+
+        return () => {
+            projectRefs.current.forEach((ref) => ref && observer.unobserve(ref));
         };
-
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
-
-        return () => window.removeEventListener('scroll', handleScroll);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
@@ -36,7 +41,7 @@ const Projects = () => {
                     {[...Array(6)].map((_, index) => (
                         <div
                             key={index}
-                            id={`project-${index}`}
+                            ref={(el) => (projectRefs.current[index] = el)}
                             className={`${projectCard} ${inView[index] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-20'}`}
                             style={{ transitionDelay: `${index * 150}ms` }}
                         >
@@ -46,12 +51,11 @@ const Projects = () => {
                         </div>
                     ))}
                 </div>
-
-                    <a href="https://drive.google.com/file/d/1o76Kd4YwOIrmPd3AGvLtEmhnMKRKT45G/view?usp=sharing" target="_blank" rel="noreferrer">
-                        <button className="my-20 px-8 py-3 bg-[#cf1b1b] text-white text-sm font-bold rounded-xl">
-                            Download CV
-                        </button>
-                    </a>
+                <a href="https://drive.google.com/file/d/1o76Kd4YwOIrmPd3AGvLtEmhnMKRKT45G/view?usp=sharing" target="_blank" rel="noreferrer">
+                    <button className="my-20 px-8 py-3 bg-[#cf1b1b] text-white text-sm font-bold rounded-xl">
+                        Download CV
+                    </button>
+                </a>
             </div>
         </section>
     );

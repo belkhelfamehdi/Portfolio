@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FaReact, FaNodeJs, FaJava } from "react-icons/fa";
 import { SiTailwindcss, SiJavascript, SiPostgresql } from "react-icons/si";
 
@@ -12,25 +12,31 @@ const Skills = () => {
         { icon: <SiPostgresql />, name: 'PostgreSQL' },
     ];
 
+    const skillRefs = useRef([]);
     const [inView, setInView] = useState(Array(skills.length).fill(false));
 
     useEffect(() => {
-        const handleScroll = () => {
-            const newInView = inView.map((item, index) => {
-                const element = document.getElementById(`skill-${index}`);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    return rect.top <= window.innerHeight && rect.bottom >= 0;
-                }
-                return item;
-            });
-            setInView(newInView);
-        };
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    const index = skillRefs.current.indexOf(entry.target);
+                    if (entry.isIntersecting && index !== -1) {
+                        setInView((prev) => {
+                            const updated = [...prev];
+                            updated[index] = true;
+                            return updated;
+                        });
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
 
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
-        return () => window.removeEventListener('scroll', handleScroll);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        skillRefs.current.forEach((ref) => ref && observer.observe(ref));
+
+        return () => {
+            skillRefs.current.forEach((ref) => ref && observer.unobserve(ref));
+        };
     }, []);
 
     const cardBase = "flex justify-center items-center border-b-[3px] border-red-600 pb-1 transition-all duration-700";
@@ -47,7 +53,7 @@ const Skills = () => {
                     {skills.map((skill, index) => (
                         <div
                             key={index}
-                            id={`skill-${index}`}
+                            ref={(el) => (skillRefs.current[index] = el)}
                             className={`${cardBase} ${inView[index] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-20'}`}
                             style={{ transitionDelay: `${index * 150}ms` }}
                         >
