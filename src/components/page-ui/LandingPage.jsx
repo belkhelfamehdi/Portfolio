@@ -10,9 +10,9 @@ const LandingPage = () => {
                 
                 <div className="relative z-10 text-center lg:text-left lg:py-8 mb-8 lg:mb-0">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold">
-                        Hi, <br />I&apos;m <span className="text-[#cf1b1b]">Mehdi</span>
+                        Hi, <span className='block pt-2'>I&apos;m <span className="text-[#cf1b1b]">Mehdi</span></span>
                     </h1>
-                    <h1 className="flex justify-center lg:justify-start items-center text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight lg:leading-normal min-h-20 lg:min-h-28 mb-0 lg:mb-11">
+                    <h1 className="flex justify-center lg:justify-start items-start pt-2 text-3xl md:text-4xl lg:text-5xl font-extrabold min-h-20 lg:min-h-28 mb-0 lg:mb-11">
                         <Typewriter
                             words={["React.js Developer", "Java Developer", "Anime Fan"]}
                             loop={true}
@@ -23,7 +23,7 @@ const LandingPage = () => {
                         <span className='bg-current animate-blink w-3 md:w-4 text-3xl md:text-4xl lg:text-5xl mt-1 lg:mt-3'>&nbsp;</span>
                     </h1>
                         <a href='#contact'>
-                            <button className="mt-4 px-8 md:px-8 lg:px-11 py-3 md:py-3 bg-[#cf1b1b] text-white text-md md:text-md font-bold rounded-xl">
+                            <button className="mt-4 px-8 md:px-8 lg:px-11 py-3 md:py-3 bg-[#cf1b1b] border border-[#cf1b1b] hover:bg-white hover:text-[#cf1b1b] text-white text-md md:text-md font-bold rounded-xl transition-all duration-150">
                                 Contact
                             </button>
                         </a>

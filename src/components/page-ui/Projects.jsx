@@ -52,7 +52,7 @@ const Projects = () => {
                     ))}
                 </div>
                 <a href="https://drive.google.com/file/d/1o76Kd4YwOIrmPd3AGvLtEmhnMKRKT45G/view?usp=sharing" target="_blank" rel="noreferrer">
-                    <button className="my-20 px-8 py-3 bg-[#cf1b1b] text-white text-sm font-bold rounded-xl">
+                    <button className="my-20 px-8 py-3 bg-[#cf1b1b] border border-[#cf1b1b] hover:bg-white hover:text-[#cf1b1b] text-white text-sm font-bold rounded-xl transition-all duration-150">
                         Download CV
                     </button>
                 </a>
