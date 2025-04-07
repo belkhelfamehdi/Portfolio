@@ -39,7 +39,7 @@ const Skills = () => {
         return () => {
             skillRefs.current.forEach((ref) => ref && observer.unobserve(ref));
         };
-    }, [inView]);
+    }, []);
 
     const cardBase = "flex justify-center items-center border-b-[3px] border-red-600 pb-1 transition-all duration-700";
     const iconBase = "text-3xl mb-1 p-2 dark:text-white text-black transition-all duration-700";
