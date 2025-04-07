@@ -20,7 +20,7 @@ const LandingPage = () => {
                             deleteSpeed={50}
                             delaySpeed={2000}
                         />
-                        <span className='bg-current animate-blink w-3 md:w-4 text-3xl md:text-4xl lg:text-5xl mt-1 lg:mt-3'>&nbsp;</span>
+                        <span className='bg-current animate-blink w-2 md:w-2 text-3xl md:text-4xl lg:text-5xl mt-1 '>&nbsp;</span>
                     </h1>
                         <a href='#contact'>
                             <button className="mt-4 px-8 md:px-8 lg:px-11 py-3 md:py-3 bg-[#cf1b1b] border border-[#cf1b1b] hover:bg-white hover:text-[#cf1b1b] text-white text-md md:text-md font-bold rounded-xl transition-all duration-150">

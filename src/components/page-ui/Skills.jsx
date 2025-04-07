@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { FaReact, FaNodeJs, FaJava } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaJava, FaAngular, FaLaravel } from "react-icons/fa";
 import { SiTailwindcss, SiJavascript, SiPostgresql } from "react-icons/si";
 
 const Skills = () => {
@@ -10,6 +10,8 @@ const Skills = () => {
         { icon: <FaNodeJs />, name: 'Node.js' },
         { icon: <FaJava />, name: 'Spring Boot' },
         { icon: <SiPostgresql />, name: 'PostgreSQL' },
+        { icon: <FaAngular />, name: 'Angular' },
+        { icon: <FaLaravel />, name: 'Laravel' },
     ];
 
     const skillRefs = useRef([]);

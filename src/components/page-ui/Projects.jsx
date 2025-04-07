@@ -2,9 +2,41 @@ import { useState, useEffect, useRef } from 'react';
 
 const Projects = () => {
     const projectCard = "flex justify-center items-center rounded-lg shadow-lg transition-all duration-500 overflow-hidden";
-    const image = "rounded-md max-sm:rounded-lg w-full h-full max-md:p-4 hover:scale-110 transition-all duration-500";
+    const image = "rounded-md max-sm:rounded-lg w-96 h-52 max-md:p-4";
 
     const projectRefs = useRef([]);
+    const projects = [
+        {
+            name: "Library Management WebApp",
+            image: "./images/projects/library.png",
+            description: "A web application for managing a library's collection of books.",
+            link: "https://github.com/belkhelfamehdi/Library-Management-WebApp",
+        },
+        {
+            name: "HardSpace",
+            image: "./images/projects/hardspace.png",
+            description: "A simple to-do list application with a dark mode.",
+            link: "https://github.com/belkhelfamehdi/E-commerce-HardSpace",
+        },
+        {
+            "name": "Library Management Desktop",
+            "image": "./images/projects/library-javafx.png",
+            "description": "A simple e-commerce website with a shopping cart.",
+            "link": "https://github.com/belkhelfamehdi/Library-Management",
+        },
+        {
+            name: "Master Production Schedule",
+            image: "./images/projects/mps.jpg",
+            description: "A desktop application for managing a library's collection of books.",
+            link: "https://github.com/belkhelfamehdi/Master-Production-Schedule",
+        },
+        {
+            name: "E-commerce HardSpace",
+            image: "./images/projects/clinique.png",
+            description: "A simple e-commerce website with a shopping cart.",
+            link: "https://github.com/belkhelfamehdi/clinical-management",
+        }
+    ]
     const [inView, setInView] = useState(Array(6).fill(false));
 
     useEffect(() => {
@@ -38,20 +70,24 @@ const Projects = () => {
                     Projects
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6 md:gap-14 w-full lg:pt-10 md:px-10">
-                    {[...Array(6)].map((_, index) => (
+                    {projects.map((project, index) => (
                         <div
                             key={index}
                             ref={(el) => (projectRefs.current[index] = el)}
                             className={`${projectCard} ${inView[index] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-20'}`}
                             style={{ transitionDelay: `${index * 150}ms` }}
                         >
-                            <a href="https://github.com/belkhelfamehdi/Library-Management-WebApp" target="_blank" rel="noreferrer">
-                                <img src="./images/projects/clinical.png" alt={`Project ${index + 1}`} className={image} />
+                            <a className='relative' href={`${project.link}`} target="_blank" rel="noreferrer">
+                                <img src={`${project.image}`} alt={`Project ${index + 1}`} className={image} />
+                                <div className="absolute inset-0 bg-black bg-opacity-50 px-4 flex flex-col space-y-3 justify-center items-center opacity-0 hover:opacity-100 transition-all duration-500">
+                                    <p className="text-white text-center text-lg font-bold">{project.name}</p>
+                                    <p className='text-white text-center text-md font-thin'>{project.description}</p>
+                                </div>
                             </a>
                         </div>
                     ))}
                 </div>
-                <a href="https://drive.google.com/file/d/1o76Kd4YwOIrmPd3AGvLtEmhnMKRKT45G/view?usp=sharing" target="_blank" rel="noreferrer">
+                <a href="https://drive.google.com/file/d/1VS40vxJBE5bDKVXAyXz2Lf7G7NyTvb1D/view?usp=sharing" target="_blank" rel="noreferrer">
                     <button className="my-20 px-8 py-3 bg-[#cf1b1b] border border-[#cf1b1b] hover:bg-white hover:text-[#cf1b1b] text-white text-sm font-bold rounded-xl transition-all duration-150">
                         Download CV
                     </button>
