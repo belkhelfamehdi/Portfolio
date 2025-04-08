@@ -19,6 +19,7 @@ const Contact = () => {
             (entries) => {
                 entries.forEach((entry) => {
                     const index = contactRefs.current.indexOf(entry.target);
+                    console.log(entry.target, contactRefs.current.indexOf(entry.target));
                     if (entry.isIntersecting && index !== -1) {
                         setInView((prev) => {
                             const updated = [...prev];

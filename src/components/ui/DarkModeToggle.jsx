@@ -2,20 +2,19 @@ import { useState, useEffect } from 'react';
 import { MoonIcon } from '@radix-ui/react-icons';
 
 const DarkModeToggle = () => {
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
     
     useEffect(() => {
-        document.documentElement.classList.add('dark');
-    }, []);
-
+        document.documentElement.classList.toggle('dark', darkMode);
+    }, [darkMode]);
+    
     const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
-        document.documentElement.classList.toggle('dark');
+        setDarkMode(prev => !prev);
     };
 
     return (
         <button onClick={toggleDarkMode} className="focus:outline-none">
-            {darkMode ? <MoonIcon className='h-8 w-8 text-black'/> : <MoonIcon className='h-8 w-8 text-white'/>}
+            {darkMode ? <MoonIcon className='h-8 w-8 text-white'/> : <MoonIcon className='h-8 w-8 text-black'/>}
         </button>
     );
 };
