@@ -27,7 +27,7 @@ const Formation = () => {
         <section id='formations' className="dark:bg-black bg-white pb-16 px-4 sm:px-14 transition-all duration-500">
             <div className="container flex flex-col justify-center items-center -my-6">
                 {timelineData.map((item, index) => (
-                    <TimelineItem 
+                    <TimelineItem
                         key={index}
                         id={`formation-${index}`}
                         label={item.label}
